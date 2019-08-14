@@ -1,5 +1,6 @@
 <?php 
     class Users extends CI_Controller{
+        //REGISTER
         public function register(){
             $data['title'] = 'SignUp';
 
@@ -51,7 +52,7 @@
 				    $this->session->set_userdata($user_data);
 					// Set message
 					$this->session->set_flashdata('user_login', 'You are now logged in');
-					redirect('posts');
+					redirect('menu');
 				} else {
 					// Set message
 					$this->session->set_flashdata('user_failed', 'Login is invalid');
@@ -71,9 +72,6 @@
 					redirect('users/login');
         }
         //unset user data
-
-
-        
 
         public function check_name_exists($name){
             $this->form_validation->set_message('check_name_exists', 'Name already Taken');
