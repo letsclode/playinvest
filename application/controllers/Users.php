@@ -51,7 +51,6 @@
 					);
 				    $this->session->set_userdata($user_data);
 					// Set message
-					$this->session->set_flashdata('user_login', 'You are now logged in');
 					redirect('menu');
 				} else {
 					// Set message
